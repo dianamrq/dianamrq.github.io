@@ -300,6 +300,17 @@
     <script src="scripts/mdb.min.js?ver=1.2.1"></script>
     <script src="scripts/aos.js?ver=1.2.1"></script>
     <script src="scripts/main.js?ver=1.2.1"></script>
+	  <script>
+					  // Calculate days since 1990-1-1
+			var initialDate = new Date(1990,1,1); //
+			var now = Date.now();
+			var difference = (now - initialDate);
+			var millisecondsPerDay = 24 * 60 * 60 * 1000;
+			var daysSince = Math.floor(difference / millisecondsPerDay/365);
+
+			// Write result to HTML
+			document.getElementById('days_since').innerHTML = daysSince;
+	  </script>
   </body>
 </html>
 
